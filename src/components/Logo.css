@@ -1,0 +1,65 @@
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-midnight-navy);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 12px rgba(22, 199, 183, 0.2);
+  transition: var(--transition);
+}
+
+.brand-logo:hover .logo-icon {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(22, 199, 183, 0.3);
+}
+
+.logo-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  display: flex;
+  align-items: baseline;
+  letter-spacing: -0.02em;
+}
+
+.logo-text-bold {
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.logo-text-light {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.logo-text-accent {
+  font-weight: 700;
+  color: var(--color-electric-teal);
+  font-size: 0.9em;
+  margin-left: 0.1rem;
+}
+
+/* Light background vs Dark background variants */
+.dark-mode .logo-text-bold,
+.dark-mode .logo-text-light {
+  color: var(--color-white);
+}
+
+.dark-mode .logo-icon {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
